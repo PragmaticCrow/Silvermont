@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Silvermont-Media</title>
+    <link rel="shortcut icon" href="img/head.jpeg">
+  </head>
+  <body class="bg-slate-950">
+    <!-- Navbar -->
+    <nav class="relative container mx-auto p-6">
+      <!-- Flex container -->
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <a href="/" class="pt-2">
+          <img src="img/LogoBlanco.png" alt="Logo" class="w-3/5"/>
+        </a>
+        <!-- Menu Items -->
+        <div class="hidden space-x-6 md:flex px-10">
+          <a href="/planes" class="text-slate-300 hover:text-darkGrayishBlue">Planes</a>
+          <a href="/portafolio" class="text-slate-300 hover:text-darkGrayishBlue">Portafolio</a>
+          <a href="/nosotros" class="text-slate-300 hover:text-darkGrayishBlue">Nosotros</a>
+        </div>
+        <!-- Button -->
+        <a target="_blank"
+          href="https://api.whatsapp.com/send?phone=528119162937&text=Buenas tardes, visité su página web y estoy interesado en uno de sus servicios."
+          class="hidden  p-3 px-6 pt-2 text-white bg-amber-500 rounded-full baseline hover:bg-amber-400 md:block">
+          Contáctanos
+        </a>
+
+        <!-- Hamburger Icon -->
+        
+        <button
+          id="menu-btn"
+          class="m-5 block hamburger md:hidden focus:outline-none">
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="md:hidden">
+        <div
+          id="menu-menu"
+          class="flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-slate-800 text-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
+          <a href="/planes" class="hover:text-slate-400">Planes</a>
+          <a href="/portafolio" class="hover:text-slate-400">Portafolio</a>
+          <a href="/nosotros" class="hover:text-slate-400 hover:">Nosotros </a>
+          <a target="_blank"
+            href="https://api.whatsapp.com/send?phone=528119162937&text=Buenas tardes, visité su página web y estoy interesado uno de sus servicios."
+            class="p-3 px-6 pt-2 text-white bg-amber-500 rounded-full baseline hover:bg-amber-400 md:block">
+            Contáctanos
+          </a>
+        </div>
+      </div>
+      <script>
+        const boton = document.querySelector('#menu-btn');
+        const menu = document.querySelector('#menu-menu');
+
+        boton.addEventListener('click', () => {
+            menu.classList.toggle('hidden')
+            boton.classList.toggle('open')
+            menu-menu.classList.toggle('flex')
+        })
+      </script>
+    </nav>
+    <hr>
+  </body>
+<html/>

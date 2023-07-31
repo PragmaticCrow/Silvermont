@@ -1,0 +1,15 @@
+---
+const {REDIRECCION} = Astro.props
+const {IMG} = Astro.props
+const {CONTENIDO} = Astro.props
+---
+
+
+<li class="w-full md:w-1/2 bg-slate-800 p-5"> 
+    <a target="_blank" href={REDIRECCION} class="flex justify-center align-center">
+        <img src={IMG} class="p-3 hover:blur-sm" alt="">
+        <p class="hidden md:block text-slate-300 hover:text-slate-400 my-auto text-left">{CONTENIDO}</p>
+
+    </a>
+    <p class="block md:hidden text-slate-300 text-center">{CONTENIDO}</p>
+</li>
